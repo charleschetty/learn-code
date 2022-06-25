@@ -1,0 +1,3 @@
+print("fuxk")
+
+print("afaf")

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/charles/Documents/opencv/example_cmake/build",
+  "command": "/usr/bin/g++ -isystem /usr/include/opencv4 -g -o CMakeFiles/opencv_example.dir/example.cpp.o -c /home/charles/Documents/opencv/example_cmake/example.cpp",
+  "file": "/home/charles/Documents/opencv/example_cmake/example.cpp"
+}
+]

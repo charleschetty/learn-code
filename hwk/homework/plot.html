@@ -1,0 +1,86 @@
+<head>
+    <!-- <script src="https://cdn.plot.ly/plotly-2.10.0.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/plotly.js/2.10.0/plotly.min.js"></script>
+    <script src="1.js"></script>
+</head>
+<style>
+div.c1 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+div.c1:hover {
+    border: 1px solid #777;
+}
+</style>
+<body>
+<!-- <h1>avdhaudvd</h1> -->
+    <div class="c1"><div id="gd"></div></div>
+    <div class="c1"><div id="nd"></div></div>
+    <div class="c1"><div id='std'></div></div>
+    <!-- <div id="gd"></div> -->
+
+    <script>
+        var f1=new fixed_point(the_fun3_fix,100,Math.pow(10,-10))
+        var step_f1=[]
+        var res_f1=[]
+        for (var step_temp=0.01;step_temp<1;step_temp=step_temp+0.01){
+            step_f1.push(step_temp)
+            var tem=f1.show(step_temp)
+            res_f1.push(f1.p_list.length)
+        }
+        Plotly.newPlot("gd", /* JSON object */ 
+                {
+                "data": [{"x": step_f1,"y": res_f1 ,"type":'scatter'}],
+                "layout": { "width": 600, 
+                            "height": 400, 
+                            title:'fixed point', 
+                            xaxis: {title: '初始数值'},
+                            yaxis: {title: '迭代次数'},
+                }});
+    </script>
+
+
+
+    <script>
+        var n1=new Newton_mtd(the_fun3,the_fun3_grad,100,Math.pow(10,-10))
+        var step_n1=[]
+        var res_n1=[]
+        for (var step_temp=0.01;step_temp<1;step_temp=step_temp+0.01){
+            step_n1.push(step_temp)
+            var tem=n1.show(step_temp)
+                res_n1.push(n1.p_list.length)
+        }
+        Plotly.newPlot("nd", /* JSON object */ 
+            {
+                "data": [{"x": step_n1,"y": res_n1  ,"type":'scatter'}],
+                "layout": { "width": 600, 
+                            "height": 400, 
+                            title:'newton mtd', 
+                            xaxis: {title: '初始数值'},
+                            yaxis: {title: '迭代次数'},
+                }});
+    </script>
+
+
+    <script>
+        var st1=new steffensen_mtd(the_fun3_fix,100,Math.pow(10,-10))
+        var step_st1=[]
+        var res_st1=[]
+        for (var step_temp=0.01;step_temp<1;step_temp=step_temp+0.01){
+            step_st1.push(step_temp)
+            var tem=st1.show(step_temp)
+                res_st1.push(n1.p_list.length)
+        }
+        Plotly.newPlot("std", /* JSON object */ 
+            {
+                "data": [{"x": step_n1,"y": res_n1  ,"type":'scatter'}],
+                "layout": { "width": 600, 
+                            "height": 400, 
+                            title:'steffensen_mtd', 
+                            xaxis: {title: '初始数值'},
+                            yaxis: {title: '迭代次数'},
+                }});
+    </script>
+</body>
