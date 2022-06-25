@@ -1,6 +1,6 @@
 ### homework第二章作业
 
-<center>201917090008 邹金廷</center>
+
 
 OS: 						Arch Linux x86_64 
 Kernel: 				 5.16.14-arch1-1
