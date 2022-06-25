@@ -1,3 +1,0 @@
-/home/charles/Documents/opencv/example_cmake/build/CMakeFiles/opencv_example.dir
-/home/charles/Documents/opencv/example_cmake/build/CMakeFiles/edit_cache.dir
-/home/charles/Documents/opencv/example_cmake/build/CMakeFiles/rebuild_cache.dir
